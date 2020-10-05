@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/d10dp"
+    app:cardCornerRadius="@dimen/d10dp"
+    app:cardElevation="@dimen/d10dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/d5dp"
+            android:orientation="horizontal"
+            android:padding="@dimen/d5dp"
+            android:weightSum="3">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivProfileRequest"
+                android:layout_gravity="center_vertical"
+                android:layout_width="@dimen/d50dp"
+                android:layout_height="@dimen/d50dp"
+                android:layout_weight="0"
+                android:background="@drawable/ic_default_pic" />
+
+            <LinearLayout
+                android:layout_gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/d10dp"
+                android:layout_weight="3"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvAdapterDriverName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Driver 002"
+                    android:textColor="@color/textColorBlack"
+                    android:textSize="@dimen/text_size_14dp" />
+
+
+                <TextView
+                    android:id="@+id/tvDateRequest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/d3dp"
+                    android:textSize="@dimen/text_size_12dp" />
+
+                <TextView
+                    android:id="@+id/tvStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/d3dp"
+                    android:textSize="@dimen/text_size_12dp" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/ivCancel"
+                android:padding="@dimen/d10dp"
+                android:layout_gravity="center_vertical"
+                android:layout_width="@dimen/d30dp"
+                android:layout_height="@dimen/d30dp"
+                android:layout_weight="0"
+                android:background="@drawable/ic_baseline_cancel_24" />
+
+            <ImageView
+                android:id="@+id/ivAccept"
+                android:padding="@dimen/d10dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/d5dp"
+                android:layout_width="@dimen/d30dp"
+                android:layout_height="@dimen/d30dp"
+                android:layout_weight="0"
+                android:background="@drawable/ic_baseline_check_circle_24" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

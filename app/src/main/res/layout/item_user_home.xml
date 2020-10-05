@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/d10dp"
+    app:cardCornerRadius="@dimen/d10dp"
+    app:cardElevation="@dimen/d10dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/d5dp"
+        android:paddingBottom="@dimen/d5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/d5dp"
+            android:orientation="horizontal"
+            android:paddingEnd="@dimen/d5dp"
+            android:weightSum="3">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivProfileUser"
+                android:layout_width="@dimen/d30dp"
+                android:layout_height="@dimen/d30dp"
+                android:layout_weight="0"
+                android:background="@drawable/ic_default_pic" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/d10dp"
+                android:layout_weight="3"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvAdapterDriverName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorBtnBlue"
+                        android:textSize="@dimen/text_size_14dp" />
+
+                    <TextView
+                        android:layout_weight="0"
+                        android:id="@+id/tvStatus"
+                        android:gravity="end|top"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/d3dp"
+                        android:textSize="@dimen/text_size_12dp" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvPostDateUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/d3dp"
+                    android:textSize="@dimen/text_size_12dp" />
+
+                <TextView
+                    android:id="@+id/tvDateCreate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_10dp" />
+
+                <TextView
+                    android:id="@+id/tvJobName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/d5dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/textColorBlack"
+                    android:textSize="@dimen/text_size_18dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvJobCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="@dimen/d10dp"
+                android:layout_weight="1"
+                android:textColor="@color/colorBtnOrange"
+                android:textSize="@dimen/text_size_14dp" />
+
+            <TextView
+                android:id="@+id/tvJobRequest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="@dimen/d10dp"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:textColor="@color/colorBtnOrange"
+                android:textSize="@dimen/text_size_14dp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_marginTop="@dimen/d10dp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d1dp"
+            android:background="@color/lineColor" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/viewRequestGroup"
+                android:paddingTop="@dimen/d10dp"
+                android:paddingBottom="@dimen/d5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/textColorWhite"
+                android:gravity="center">
+
+                <TextView
+                    android:gravity="center"
+                    android:drawablePadding="@dimen/d5dp"
+                    android:drawableStart="@drawable/ic_baseline_group_24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ขอเข้าร่วม"
+                    android:textColor="@color/lineColorBlack"
+                    android:textSize="@dimen/text_size_18dp"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+
+
+    <TextView
+        android:layout_marginTop="@dimen/d80dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ยืนยันตัวตน"
+        android:textSize="@dimen/text_size_22dp"
+        android:textStyle="bold"
+        tools:ignore="SpUsage" />
+
+    <TextView
+        android:layout_marginStart="@dimen/d20dp"
+        android:layout_marginEnd="@dimen/d20dp"
+        android:id="@+id/tvMessageConfirm"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/d15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="5dp"
+        android:textSize="@dimen/text_size_16dp"
+        tools:ignore="SpUsage" />
+
+    <com.chaos.view.PinView
+        android:layout_marginTop="@dimen/d30dp"
+        android:id="@+id/firstPinView"
+        style="@style/PinWidget.PinView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:cursorVisible="true"
+        android:inputType="text"
+        android:padding="@dimen/d10dp"
+        android:textColor="@color/textColorBlack"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:cursorColor="@color/colorAccent"
+        app:cursorWidth="2dp"
+        app:hideLineWhenFilled="true"
+        app:itemCount="6"
+        app:itemHeight="48dp"
+        app:itemRadius="4dp"
+        app:itemSpacing="@dimen/d10dp"
+        app:itemWidth="48dp"
+        app:lineColor="@color/bgBtnRed"
+        app:lineWidth="2dp"
+        app:viewType="rectangle" />
+
+    <TextView
+        android:id="@+id/tvTimeInterval"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/d15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="5dp"
+        android:textColor="@color/textColorBlack"
+        android:textSize="@dimen/text_size_16dp"
+        tools:ignore="SpUsage" />
+
+    <Button
+        android:id="@+id/btVerify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/d40dp"
+        android:layout_marginTop="@dimen/d10dp"
+        android:layout_marginEnd="@dimen/d40dp"
+        android:background="@drawable/bg_btn_login"
+        android:text="@string/message_verification"
+        android:textColor="@color/textColorWhite"
+        android:textSize="@dimen/text_size_20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPassword"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tvTryAgine"
+        android:visibility="invisible"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/d15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="5dp"
+        android:text="@string/message_try_aligne"
+        android:textSize="@dimen/text_size_16dp"
+        tools:ignore="SpUsage" />
+
+</LinearLayout>

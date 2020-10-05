@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="beforeDescendants"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".LoginActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/textColorWhite"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/textColorWhite"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_login"
+                android:orientation="vertical"
+                tools:ignore="MissingConstraints" />
+
+            <LinearLayout
+                android:id="@+id/layoutTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/d20dp"
+                android:paddingBottom="@dimen/d10dp"
+                tools:ignore="MissingConstraints">
+
+
+                <LinearLayout
+                    android:id="@+id/viewBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/d10dp">
+
+                    <ImageView
+                        android:id="@+id/ivBack"
+                        android:layout_width="@dimen/d30dp"
+                        android:layout_height="@dimen/d20dp"
+                        android:paddingStart="@dimen/d4dp"
+                        android:paddingEnd="@dimen/d4dp"
+                        android:src="@drawable/ic_back" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="เลือกสถานที่"
+                    android:textColor="@color/textColorWhite"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_white_radius_top"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutTitle"
+                tools:ignore="MissingConstraints">
+
+
+                <fragment
+                    android:id="@+id/map"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:context=".view.driver.selectPlace.MapsActivity" />
+
+                 <ImageView
+                    android:layout_width="@dimen/d50dp"
+                    android:layout_height="@dimen/d50dp"
+                    android:background="@drawable/ic_baseline_place_red_24"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="@dimen/d10dp"
+                    android:layout_marginStart="@dimen/d20dp"
+                    android:layout_marginEnd="@dimen/d70dp"
+                    android:id="@+id/tvTitlePlace"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_edit_text"
+                    android:paddingTop="@dimen/d5dp"
+                    android:paddingBottom="@dimen/d5dp"
+                    android:paddingEnd="@dimen/d10dp"
+                    android:paddingStart="@dimen/d10dp"
+                    android:textColor="@color/textColorBlack"
+                    android:text="ชื่อสถานที่"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:textColorHint="#AAAAAA"
+                    android:drawablePadding="@dimen/d10dp"
+                    android:textSize="@dimen/text_size_15dp" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvCreateActivity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/d20dp"
+                    android:layout_marginTop="@dimen/d50dp"
+                    android:layout_marginEnd="@dimen/d20dp"
+                    android:layout_marginBottom="@dimen/d5dp"
+                    android:clipToPadding="true"
+                    app:cardBackgroundColor="@color/colorBtnOrange"
+                    app:cardCornerRadius="@dimen/d20dp"
+                    app:cardElevation="@dimen/d2dp"
+                    app:cardUseCompatPadding="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+
+                    <Button
+                        android:id="@+id/btnConfirm"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/transparent"
+                        android:text="@string/save"
+                        android:textAllCaps="false"
+                        android:textColor="@color/textColorWhite"
+                        android:textSize="@dimen/text_size_20dp" />
+
+                </androidx.cardview.widget.CardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">AppTravelSharing</string>
+    <string name="input_username">Username</string>
+    <string name="input_password">Password</string>
+    <string name="message_login">เข้าสู่ระบบ</string>
+    <string name="message_or">or</string>
+    <string name="message_register">ลงทะเบียน</string>
+    <string name="message_register_underline"><u>ลงทะเบียน</u></string>
+    <string name="select_user_type">เลือกประเภทผู้ใช้</string>
+    <string name="full_name">ชื่อ-สกุล</string>
+    <string name="phone">เบอร์โทร</string>
+    <string name="address">ที่อยู่</string>
+    <string name="text_label_1">ผู้ใช้ทั่วไป</string>
+    <string name="text_label_2">ผู้ขับขี่</string>
+    <string name="email">อีเมล</string>
+    <string name="rijbewijs">รูปใบขับขี่</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">หน้าแรก</string>
+    <string name="title_dashboard">งานของฉัน</string>
+    <string name="title_notifications">ข้อมูลส่วนตัว</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_profile">ข้อมูลส่วนตัว</string>
+    <string name="message_verification">ยืนยันตัวตน</string>
+    <string name="message_try_aligne"><u>ส่งอีกครั้ง</u></string>
+    <string name="save">บันทึก</string>
+    <string name="other">อื่นๆ</string>
+    <string name="activity_name">ชื่อสร้างกิจกรรม</string>
+    <string name="count_activity">จำนวนที่เปิดรับ</string>
+    <string name="date_activity">เลือกวันที่</string>
+    <string name="place_activity">เลือกสถานที่</string>
+    <string name="create_activity">สร้างกิจกรรม</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="activity_detail">รายละเอียด</string>
+    <string name="manage_group">จัดการผู้ใช้</string>
+    <string name="manage_group_driver">จัดการคนขับ</string>
+    <string name="message_exit">ออกจากระบบ</string>
+    <string name="loading">กำลังโหลด...</string>
+
+    <string name="storage_permission_rationale_title">Storage permission required</string>
+    <string name="storage_permition_rationale_message">In order to take a picture, you must grant this permission!</string>
+    <string name="storage_permission_denied_message">Storage permission is required in order to take a photo with the camera</string>
+    <string name="location_permission_denied_message">ไม่สามารถเข้าถึงตำแหน่งปัจจุบันได้ กรุณาเปิดการอนุญาติสิทธ์การเข้าถึง Location</string>
+    <string name="message_image_full"><u>ดูรูปใบขับขี่</u></string>
+</resources>

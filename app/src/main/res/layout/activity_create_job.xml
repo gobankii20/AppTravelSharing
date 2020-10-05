@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="beforeDescendants"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".LoginActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/textColorWhite"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/textColorWhite"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_login"
+                android:orientation="vertical"
+                tools:ignore="MissingConstraints" />
+
+            <LinearLayout
+                android:id="@+id/layoutTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/d20dp"
+                android:paddingBottom="@dimen/d10dp"
+                tools:ignore="MissingConstraints">
+
+
+                <LinearLayout
+                    android:id="@+id/viewBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/d10dp">
+
+                    <ImageView
+                        android:id="@+id/ivBack"
+                        android:layout_width="@dimen/d30dp"
+                        android:layout_height="@dimen/d20dp"
+                        android:paddingStart="@dimen/d4dp"
+                        android:paddingEnd="@dimen/d4dp"
+                        android:src="@drawable/ic_back" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="สร้างกิจกรรม"
+                    android:textColor="@color/textColorWhite"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/d10dp"
+                android:layout_marginEnd="@dimen/d10dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_white_radius_top"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutTitle"
+                tools:ignore="MissingConstraints">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="@dimen/d20dp"
+                    tools:ignore="UselessParent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/d30dp"
+                            android:layout_marginTop="@dimen/d8dp"
+                            android:layout_marginEnd="@dimen/d30dp"
+                            android:text="@string/activity_name"
+                            android:textColor="@color/textColorBlack"
+                            android:textSize="@dimen/text_size_18dp" />
+
+                        <EditText
+                            android:id="@+id/etJobName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/d30dp"
+                            android:layout_marginTop="@dimen/d8dp"
+                            android:layout_marginEnd="@dimen/d30dp"
+                            android:background="@color/textColorWhite"
+                            android:imeOptions="actionNext"
+                            android:importantForAutofill="no"
+                            android:inputType="text"
+                            android:textColor="@color/textColorBlack"
+                            android:textSize="@dimen/text_size_16dp"
+                            tools:ignore="MissingConstraints" />
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginStart="@dimen/d30dp"
+                            android:layout_marginEnd="@dimen/d30dp"
+                            android:background="@color/lineColorGray" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/d30dp"
+                            android:layout_marginTop="@dimen/d8dp"
+                            android:layout_marginEnd="@dimen/d30dp"
+                            android:text="@string/activity_detail"
+                            android:textColor="@color/textColorBlack"
+                            android:textSize="@dimen/text_size_18dp" />
+
+                        <EditText
+                            android:id="@+id/etJobDetail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/d30dp"
+                            android:layout_marginTop="@dimen/d8dp"
+                            android:layout_marginEnd="@dimen/d30dp"
+                            android:background="@color/textColorWhite"
+                            android:imeOptions="actionNext"
+                            android:importantForAutofill="no"
+                            android:inputType="textMultiLine"
+                            android:gravity="top|start"
+                            android:maxLines="4"
+                            android:lines="4"
+                            android:textColor="@color/textColorBlack"
+                            android:textSize="@dimen/text_size_16dp"
+                            tools:ignore="MissingConstraints" />
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginStart="@dimen/d30dp"
+                            android:layout_marginEnd="@dimen/d30dp"
+                            android:background="@color/lineColorGray" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/d30dp"
+                            android:layout_marginTop="@dimen/d8dp"
+                            android:layout_marginEnd="@dimen/d30dp"
+                            android:text="@string/count_activity"
+                            android:textColor="@color/textColorBlack"
+                            android:textSize="@dimen/text_size_18dp" />
+
+                        <EditText
+                            android:id="@+id/etJobCount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/d30dp"
+                            android:layout_marginTop="@dimen/d8dp"
+                            android:layout_marginEnd="@dimen/d30dp"
+                            android:background="@color/textColorWhite"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:textColor="@color/textColorBlack"
+                            android:textSize="@dimen/text_size_16dp"
+                            tools:ignore="MissingConstraints" />
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginStart="@dimen/d30dp"
+                            android:layout_marginEnd="@dimen/d30dp"
+                            android:background="@color/lineColorGray" />
+
+
+                        <TextView
+                            android:id="@+id/tvTitleSelectDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/d30dp"
+                            android:layout_marginTop="@dimen/d15dp"
+                            android:layout_marginEnd="@dimen/d30dp"
+                            android:drawablePadding="@dimen/d5dp"
+                            android:text="@string/date_activity"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/text_size_18dp"
+                            app:drawableEndCompat="@drawable/ic_baseline_date_range_24" />
+
+                        <TextView
+                            android:id="@+id/tvSelectDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/d30dp"
+                            android:layout_marginTop="@dimen/d8dp"
+                            android:layout_marginEnd="@dimen/d30dp"
+                            android:layout_weight="1"
+                            android:background="@color/textColorWhite"
+                            android:textColor="@color/textColorBlack"
+                            android:textSize="@dimen/text_size_16dp"
+                            tools:ignore="MissingConstraints" />
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginStart="@dimen/d30dp"
+                            android:layout_marginEnd="@dimen/d30dp"
+                            android:background="@color/lineColorGray" />
+
+                        <TextView
+                            android:id="@+id/tvTitleSelectPlace"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/d30dp"
+                            android:layout_marginTop="@dimen/d20dp"
+                            android:layout_marginEnd="@dimen/d30dp"
+                            android:drawablePadding="@dimen/d5dp"
+                            android:text="@string/place_activity"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/text_size_18dp"
+                            app:drawableEndCompat="@drawable/ic_baseline_place_24" />
+
+                        <TextView
+                            android:id="@+id/tvSelectPlace"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/d30dp"
+                            android:layout_marginTop="@dimen/d8dp"
+                            android:layout_marginEnd="@dimen/d30dp"
+                            android:layout_weight="1"
+                            android:background="@color/textColorWhite"
+                            android:textColor="@color/textColorBlack"
+                            android:textSize="@dimen/text_size_16dp"
+                            tools:ignore="MissingConstraints" />
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginStart="@dimen/d30dp"
+                            android:layout_marginEnd="@dimen/d30dp"
+                            android:background="@color/lineColorGray" />
+
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cvCreateActivity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/d20dp"
+                            android:layout_marginTop="@dimen/d50dp"
+                            android:layout_marginEnd="@dimen/d20dp"
+                            android:clipToPadding="true"
+                            app:cardBackgroundColor="@color/colorBtnOrange"
+                            app:cardCornerRadius="@dimen/d20dp"
+                            app:cardElevation="@dimen/d2dp"
+                            app:cardUseCompatPadding="true">
+
+
+                            <Button
+                                android:id="@+id/btnConfirm"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/transparent"
+                                android:text="@string/create_activity"
+                                android:textAllCaps="false"
+                                android:textColor="@color/textColorWhite"
+                                android:textSize="@dimen/text_size_20dp" />
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+                </ScrollView>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

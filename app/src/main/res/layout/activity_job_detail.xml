@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="beforeDescendants"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".LoginActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/textColorWhite"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/textColorWhite"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_login"
+                android:orientation="vertical"
+                tools:ignore="MissingConstraints" />
+
+            <LinearLayout
+                android:id="@+id/layoutTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/d20dp"
+                android:paddingBottom="@dimen/d10dp"
+                tools:ignore="MissingConstraints">
+
+
+                <LinearLayout
+                    android:id="@+id/viewBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:padding="@dimen/d10dp">
+
+                    <ImageView
+                        android:id="@+id/ivBack"
+                        android:layout_width="@dimen/d30dp"
+                        android:layout_height="@dimen/d20dp"
+                        android:paddingStart="@dimen/d4dp"
+                        android:paddingEnd="@dimen/d4dp"
+                        android:src="@drawable/ic_back" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="รายละเอียดกิจกรรม"
+                    android:textColor="@color/textColorWhite"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:id="@+id/viewNavigator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/d10dp"
+                    android:layout_weight="0"
+                    android:padding="@dimen/d10dp">
+
+                    <ImageView
+                        android:id="@+id/ivNavigator"
+                        android:layout_width="@dimen/d30dp"
+                        android:layout_height="@dimen/d25dp"
+                        android:background="@drawable/ic_navigate"
+                        android:backgroundTint="@color/textColorWhite"
+                        android:paddingStart="@dimen/d4dp"
+                        android:paddingEnd="@dimen/d4dp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:fillViewport="true"
+                android:fitsSystemWindows="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutTitle">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/d10dp"
+                    android:layout_marginEnd="@dimen/d10dp"
+                    android:background="@drawable/shape_white_radius_top"
+                    android:orientation="vertical"
+                    tools:ignore="MissingConstraints">
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingTop="@dimen/d20dp"
+                        tools:ignore="UselessParent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/viewUserDetail"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/d20dp"
+                                android:layout_marginEnd="@dimen/d20dp"
+                                android:orientation="horizontal"
+                                android:weightSum="3">
+
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:layout_gravity="center"
+                                    android:id="@+id/ivProfile"
+                                    android:layout_width="@dimen/d50dp"
+                                    android:layout_height="@dimen/d50dp"
+                                    android:layout_weight="0"
+                                    android:background="@drawable/ic_default_pic" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/d10dp"
+                                    android:layout_weight="3"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:id="@+id/tvAdapterDriverName"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:textColor="@color/textColorBlack"
+                                            android:textSize="@dimen/text_size_16dp" />
+
+                                        <TextView
+                                            android:id="@+id/tvTitleStatus"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="0"
+                                            android:gravity="end|top"
+                                            android:textSize="@dimen/text_size_14dp" />
+
+                                    </LinearLayout>
+
+                                    <TextView
+                                        android:id="@+id/tvTitleCreate"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/d5dp"
+                                        android:layout_marginEnd="@dimen/d10dp"
+                                        android:textSize="@dimen/text_size_14dp" />
+
+                                    <TextView
+                                        android:visibility="gone"
+                                        android:id="@+id/tvStatusRequest"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginEnd="@dimen/d10dp"
+                                        android:layout_marginBottom="@dimen/d8dp"
+                                        android:textSize="@dimen/text_size_14dp" />
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                            <FrameLayout
+                                android:id="@+id/lineUserDetail"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginStart="@dimen/d30dp"
+                                android:layout_marginTop="@dimen/d10dp"
+                                android:layout_marginEnd="@dimen/d30dp"
+                                android:layout_marginBottom="@dimen/d10dp"
+                                android:background="@color/lineColorGray" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/d30dp"
+                                android:layout_marginTop="@dimen/d8dp"
+                                android:layout_marginEnd="@dimen/d30dp"
+                                android:text="@string/activity_name"
+                                android:textColor="@color/textColorBlack"
+                                android:textSize="@dimen/text_size_18dp" />
+
+                            <TextView
+                                android:id="@+id/jobName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/d30dp"
+                                android:layout_marginTop="@dimen/d8dp"
+                                android:layout_marginEnd="@dimen/d30dp"
+                                android:background="@color/textColorWhite"
+                                android:textColor="@color/textColorBlack"
+                                android:textSize="@dimen/d15dp"
+                                tools:ignore="MissingConstraints" />
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginStart="@dimen/d30dp"
+                                android:layout_marginEnd="@dimen/d30dp"
+                                android:background="@color/lineColorGray" />
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/d30dp"
+                                android:layout_marginTop="@dimen/d8dp"
+                                android:layout_marginEnd="@dimen/d30dp"
+                                android:text="@string/activity_detail"
+                                android:textColor="@color/textColorBlack"
+                                android:textSize="@dimen/text_size_18dp" />
+
+                            <TextView
+                                android:id="@+id/jobDetail"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/d30dp"
+                                android:layout_marginTop="@dimen/d8dp"
+                                android:layout_marginEnd="@dimen/d30dp"
+                                android:background="@color/textColorWhite"
+                                android:gravity="top|start"
+                                android:textColor="@color/textColorBlack"
+                                android:textSize="@dimen/d15dp"
+                                tools:ignore="MissingConstraints" />
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginStart="@dimen/d30dp"
+                                android:layout_marginEnd="@dimen/d30dp"
+                                android:background="@color/lineColorGray" />
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/d30dp"
+                                android:layout_marginTop="@dimen/d15dp"
+                                android:layout_marginEnd="@dimen/d30dp"
+                                android:text="@string/count_activity"
+                                android:textColor="@color/textColorBlack"
+                                android:textSize="@dimen/text_size_18dp" />
+
+                            <TextView
+                                android:id="@+id/tvJobCount"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/d30dp"
+                                android:layout_marginTop="@dimen/d8dp"
+                                android:layout_marginEnd="@dimen/d30dp"
+                                android:background="@color/textColorWhite"
+                                android:textColor="@color/textColorBlack"
+                                android:textSize="@dimen/d15dp"
+                                tools:ignore="MissingConstraints" />
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginStart="@dimen/d30dp"
+                                android:layout_marginEnd="@dimen/d30dp"
+                                android:background="@color/lineColorGray" />
+
+
+                            <TextView
+                                android:id="@+id/tvTitleSelectDate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/d30dp"
+                                android:layout_marginTop="@dimen/d15dp"
+                                android:layout_marginEnd="@dimen/d30dp"
+                                android:drawablePadding="@dimen/d5dp"
+                                android:text="วันที่จัดงาน"
+                                android:textColor="@color/textColorBlack"
+                                android:textSize="@dimen/text_size_18dp"
+                                app:drawableEndCompat="@drawable/ic_baseline_date_range_24" />
+
+                            <TextView
+                                android:id="@+id/tvSelectDate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/d30dp"
+                                android:layout_marginTop="@dimen/d8dp"
+                                android:layout_marginEnd="@dimen/d30dp"
+                                android:layout_weight="1"
+                                android:background="@color/textColorWhite"
+                                android:textColor="@color/textColorBlack"
+                                android:textSize="@dimen/d15dp"
+                                tools:ignore="MissingConstraints" />
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginStart="@dimen/d30dp"
+                                android:layout_marginEnd="@dimen/d30dp"
+                                android:background="@color/lineColorGray" />
+
+                            <TextView
+                                android:id="@+id/tvTitleSelectPlace"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/d30dp"
+                                android:layout_marginTop="@dimen/d20dp"
+                                android:layout_marginEnd="@dimen/d30dp"
+                                android:drawablePadding="@dimen/d5dp"
+                                android:text="สถานที่จัดงาน"
+                                android:textColor="@color/textColorBlack"
+                                android:textSize="@dimen/text_size_18dp"
+                                app:drawableEndCompat="@drawable/ic_baseline_place_24" />
+
+                            <TextView
+                                android:id="@+id/tvSelectPlace"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/d30dp"
+                                android:layout_marginTop="@dimen/d8dp"
+                                android:layout_marginEnd="@dimen/d30dp"
+                                android:layout_weight="1"
+                                android:background="@color/textColorWhite"
+                                android:textColor="@color/textColorBlack"
+                                android:textSize="@dimen/d15dp"
+                                tools:ignore="MissingConstraints" />
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginStart="@dimen/d30dp"
+                                android:layout_marginEnd="@dimen/d30dp"
+                                android:background="@color/lineColorGray" />
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/d50dp"
+                                android:gravity="center_horizontal"
+                                android:orientation="vertical">
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/cvRequestGroup"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/d30dp"
+                                    android:layout_marginEnd="@dimen/d30dp"
+                                    android:clipToPadding="true"
+                                    android:visibility="gone"
+                                    app:cardBackgroundColor="@color/colorBtnOrange"
+                                    app:cardCornerRadius="@dimen/d20dp"
+                                    app:cardElevation="@dimen/d2dp"
+                                    app:cardUseCompatPadding="true">
+
+
+                                    <Button
+                                        android:id="@+id/btnRequestGroup"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginStart="@dimen/d20dp"
+                                        android:layout_marginEnd="@dimen/d20dp"
+                                        android:background="@color/transparent"
+                                        android:drawableStart="@drawable/ic_baseline_group_white__24"
+                                        android:drawablePadding="@dimen/d4dp"
+                                        android:text="ขอเข้าร่วม"
+                                        android:textAllCaps="false"
+                                        android:textColor="@color/textColorWhite"
+                                        android:textSize="@dimen/text_size_20dp" />
+
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:visibility="gone"
+                                    android:id="@+id/cvRequestJob"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/d30dp"
+                                    android:layout_marginEnd="@dimen/d30dp"
+                                    android:clipToPadding="true"
+                                    app:cardBackgroundColor="@color/colorBtnOrange"
+                                    app:cardCornerRadius="@dimen/d20dp"
+                                    app:cardElevation="@dimen/d2dp"
+                                    app:cardUseCompatPadding="true">
+
+
+                                    <Button
+                                        android:id="@+id/btnRequestJob"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginStart="@dimen/d20dp"
+                                        android:layout_marginEnd="@dimen/d20dp"
+                                        android:background="@color/transparent"
+                                        android:drawableStart="@drawable/ic_baseline_person_add_24"
+                                        android:drawablePadding="@dimen/d4dp"
+                                        android:text="ผู้ขอเข้าร่วม"
+                                        android:textAllCaps="false"
+                                        android:textColor="@color/textColorWhite"
+                                        android:textSize="@dimen/text_size_20dp" />
+
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:visibility="gone"
+                                    android:id="@+id/cvGroundChat"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/d30dp"
+                                    android:layout_marginEnd="@dimen/d30dp"
+                                    android:clipToPadding="true"
+                                    app:cardBackgroundColor="@color/colorBtnBlue"
+                                    app:cardCornerRadius="@dimen/d20dp"
+                                    app:cardElevation="@dimen/d2dp"
+                                    app:cardUseCompatPadding="true">
+
+
+                                    <Button
+                                        android:id="@+id/btnGroundChat"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginStart="@dimen/d20dp"
+                                        android:layout_marginEnd="@dimen/d20dp"
+                                        android:background="@color/transparent"
+                                        android:drawableStart="@drawable/ic_baseline_chat_24"
+                                        android:drawablePadding="@dimen/d5dp"
+                                        android:text="ห้องแชท"
+                                        android:textAllCaps="false"
+                                        android:textColor="@color/textColorWhite"
+                                        android:textSize="@dimen/text_size_20dp" />
+
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:visibility="gone"
+                                    android:id="@+id/cvActionOther"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/d30dp"
+                                    android:layout_marginEnd="@dimen/d30dp"
+                                    android:clipToPadding="true"
+                                    app:cardBackgroundColor="@color/colorBtnBlue"
+                                    app:cardCornerRadius="@dimen/d20dp"
+                                    app:cardElevation="@dimen/d2dp"
+                                    app:cardUseCompatPadding="true">
+
+
+                                    <Button
+                                        android:id="@+id/btnActionOther"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginStart="@dimen/d20dp"
+                                        android:layout_marginEnd="@dimen/d20dp"
+                                        android:background="@color/transparent"
+                                        android:drawableEnd="@drawable/ic_baseline_create_24"
+                                        android:text="คำสั่ง"
+                                        android:textAllCaps="false"
+                                        android:textColor="@color/textColorWhite"
+                                        android:textSize="@dimen/text_size_20dp" />
+
+                                </androidx.cardview.widget.CardView>
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </ScrollView>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

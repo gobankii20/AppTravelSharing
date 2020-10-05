@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+  <color name="colorPrimary">#008577</color>
+  <color name="colorPrimaryDark">#191919</color>
+  <color name="colorAccent">#D81B60</color>
+
+  <color name="transparent">@android:color/transparent</color>
+
+  <color name="colorBgApp">#F7F7F8</color>
+  <color name="colorBgLoading">#2C595959</color>
+
+  // Text Color
+  <color name="textColorBlack">#000000</color>
+  <color name="textColorGray">#cbcbcb</color>
+  <color name="textColorWhite">#ffffff</color>
+
+  // Place Holder
+  <color name="placeHolderColorBlack" tools:keep="@color/placeHolderColorBlack">#1a1a1a</color>
+  <color name="placeHolderColorGray">#efefef</color>
+  <color name="placeHolderColorWhite">#ffffff</color>
+  <color name="colorLine">#FFFF</color>
+
+  // Shadow
+  <color name="shadowColor75" tools:keep="@color/shadowColor75">#BF000000</color>
+  <color name="shadowColor50" tools:keep="@color/shadowColor50">#80000000</color>
+  <color name="shadowColor25" tools:keep="@color/shadowColor25">#40000000</color>
+
+  // Button
+  <color name="buttonColorFaceBook" tools:keep="@color/buttonColorFaceBook">#475993</color>
+
+  // Line
+  <color name="lineColorBlack" tools:keep="@color/lineColorBlack">#000000</color>
+  <color name="lineColorGray" tools:keep="@color/lineColorGray">#d4d4d4</color>
+  <color name="lineColorWhite" tools:keep="@color/lineColorWhite">#ffffff</color>
+  <color name="lineColor" tools:keep="@color/lineColor">#45959595</color>
+
+  <color name="colorBadge">#FC323B</color>
+  <color name="colorLoadProgress" tools:keep="@color/colorLoadProgress">#FC323B</color>
+
+  <color name="colorBtnGreen">#39C63F</color>
+  <color name="colorBtnGreenProgress" tools:keep="@color/colorLoadProgress">#308A34</color>
+
+  <color name="colorBtnOrange">#FF5722</color>
+  <color name="colorBtnOrangeProgress" tools:keep="@color/colorLoadProgress">#C5380A</color>
+
+  <color name="colorBtnBlue">#03A9F4</color>
+  <color name="colorBtnBlueProgress" tools:keep="@color/colorLoadProgress">#1A6EB1</color>
+
+  <color name="colorLineTab">#E2E2E2</color>
+  <color name="colorChoose">#F2F2F2</color>
+  <color name="colorTabNotSelected">#CCCCCC</color>
+  <color name="colorBgLogin">#FF6900</color>
+  <color name="bgColorGreen">#288327</color>
+
+
+  <color name="colorStatusSuccess">#288327</color>
+  <color name="colorStatusCancel">#FC323B</color>
+  <color name="colorStatusPending">#00BCD4</color>
+
+  <color name="bgBtnRed">#FD5C63</color>
+  <color name="bgBtnRedShadow" tools:keep="@color/bgBtnRedShadow">#C6FD5C63</color>
+  <color name="bgBtnFacebook" tools:keep="@color/bgBtnFacebook">#4267B2</color>
+  <color name="bgBtnFacebookShadow" tools:keep="@color/bgBtnFacebookShadow">#C84267B2</color>
+  <color name="bgBtnWhiteShadows" tools:keep="@color/bgBtnWhiteShadows">#32000000</color>
+</resources>

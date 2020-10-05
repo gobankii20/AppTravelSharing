@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "457915816711",
+    "firebase_url": "https://travelsharing-f85c5.firebaseio.com",
+    "project_id": "travelsharing-f85c5",
+    "storage_bucket": "travelsharing-f85c5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:457915816711:android:8fd36cbbc25b378a1803a2",
+        "android_client_info": {
+          "package_name": "com.simple.travelsharing"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "457915816711-1bvh90c07h70tjhqaevl3knidktslupp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDTqDJ_uRnUbjiwcFJijdB3BcnM8IDatc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "457915816711-1bvh90c07h70tjhqaevl3knidktslupp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

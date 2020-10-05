@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.admin.AdminMainActivity">
+
+
+    <LinearLayout
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <Button
+            android:id="@+id/btManageGruop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/d40dp"
+            android:layout_marginEnd="@dimen/d40dp"
+            android:background="@drawable/bg_btn_login"
+            android:text="@string/manage_group"
+            android:textColor="@color/textColorWhite"
+            android:textSize="@dimen/text_size_20dp" />
+
+        <Button
+            android:id="@+id/btExit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/d40dp"
+            android:layout_marginTop="@dimen/d20dp"
+            android:layout_marginEnd="@dimen/d40dp"
+            android:background="@drawable/bg_btn_blue"
+            android:text="@string/message_exit"
+            android:textColor="@color/textColorWhite"
+            android:textSize="@dimen/text_size_20dp" />
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

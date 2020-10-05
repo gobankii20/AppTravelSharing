@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.simple.travelsharing">
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the "MyLocation" functionality.
+    -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+
+    <uses-feature android:name="android.hardware.location" android:required="true" />
+    <uses-feature android:name="android.hardware.location.gps" android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar"
+        tools:targetApi="q">
+
+        <activity android:name=".view.user.UserMainActivity" />
+        <activity
+            android:name=".view.admin.ManageGroupActivity"
+            android:parentActivityName=".view.admin.AdminMainActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".view.admin.AdminMainActivity"
+            android:label="ผู้ดูแลระบบ"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".view.driver.requestJob.RequestJobActivity" />
+        <activity android:name=".view.driver.groupChat.GroupChatActivity" />
+        <activity android:name=".view.driver.jobDetail.JobDetailActivity" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyABrfTwoc4wQbfOA3Rr3UsW5b_L7qA157c" />
+
+        <activity
+            android:name=".view.driver.selectPlace.MapsActivity"
+            android:label="@string/title_activity_maps" />
+        <activity android:name=".view.driver.createJob.CreateJobActivity" />
+        <activity android:name=".view.driver.VerifyActivity" />
+        <activity
+            android:name=".view.driver.MainActivity"
+            android:label="@string/title_activity_main" />
+        <activity android:name=".view.RegisterActivity" />
+        <activity android:name=".LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
