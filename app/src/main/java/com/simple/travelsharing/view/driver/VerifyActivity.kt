@@ -51,6 +51,8 @@ class VerifyActivity : AppCompatActivity() {
 
     private val FORMAT = "%02d:%02d"
 
+    private var userCode = ""
+
     private fun Context.hideKeyboard(view: View) =
         (getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager).hideSoftInputFromWindow(
             view.windowToken,
@@ -63,9 +65,14 @@ class VerifyActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_verify)
 
+        getIntentExtra()
         initView()
         initOnClick()
         startFirebaseLogin()
+    }
+
+    private fun getIntentExtra() {
+        userCode = intent?.getStringExtra("user_code").toString()
     }
 
     @SuppressLint("SetTextI18n")
@@ -190,7 +197,7 @@ class VerifyActivity : AppCompatActivity() {
 
     private fun startAppVerifySuccess() {
         mRootRef.orderByChild("user_code")
-            .equalTo(SharedPreference(this).getUserCode())
+            .equalTo(userCode)
             .addListenerForSingleValueEvent(object : ValueEventListener {
                 override fun onDataChange(dataSnapshot: DataSnapshot) {
                     if (dataSnapshot.exists()) {
@@ -198,10 +205,9 @@ class VerifyActivity : AppCompatActivity() {
                             dataSnapshot.children.map { it.getValue(ModelCreateUser::class.java)!! }
                         doUpdateStatusUser(list, dataSnapshot)
                     } else {
-                        Toast.makeText(this@VerifyActivity, "ไม่พบผู้ใช้งาน", Toast.LENGTH_SHORT)
-                            .show()
+                        CustomDialogLoading.dissProgressDialog()
+                        Toast.makeText(this@VerifyActivity, "ไม่พบผู้ใช้งาน", Toast.LENGTH_SHORT).show()
                     }
-                    CustomDialogLoading.dissProgressDialog()
                 }
 
                 override fun onCancelled(databaseError: DatabaseError) {
@@ -243,6 +249,8 @@ class VerifyActivity : AppCompatActivity() {
         }
 
         Handler().postDelayed({
+            CustomDialogLoading.dissProgressDialog()
+
             val intentMain = Intent(
                 this,
                 MainActivity::class.java

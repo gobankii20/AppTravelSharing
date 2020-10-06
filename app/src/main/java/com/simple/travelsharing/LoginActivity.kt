@@ -168,6 +168,7 @@ class LoginActivity : AppCompatActivity() {
                     startActivity(intentMain)
                 }else{
                     val intentMain = Intent(this, VerifyActivity::class.java)
+                    intentMain.putExtra("user_code",modeLogin.user_code)
                     startActivity(intentMain)
                 }
             }
