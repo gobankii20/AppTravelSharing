@@ -173,13 +173,25 @@ class LoginActivity : AppCompatActivity() {
                 }
             }
             "user" -> {
+                saveData(modeLogin)
                 val intentMain = Intent(this, UserMainActivity::class.java)
                 startActivity(intentMain)
             }
             "admin" -> {
+                saveData(modeLogin)
                 val intentMain = Intent(this, AdminMainActivity::class.java)
                 startActivity(intentMain)
             }
         }
+    }
+
+    private fun saveData(modeLogin: ModeLogin) {
+        mSharedPreference.saveUserRule(modeLogin.user_rule ?: "")
+        mSharedPreference.saveUserName(modeLogin.user_name ?: "")
+        mSharedPreference.saveUserCode(modeLogin.user_code ?: "")
+        mSharedPreference.saveFullName(modeLogin.user_fullname ?: "")
+        mSharedPreference.saveImage(modeLogin.user_image ?: "")
+        mSharedPreference.saveEmail(modeLogin.user_email ?: "")
+        mSharedPreference.savePhone(modeLogin.user_phone ?: "")
     }
 }
