@@ -16,6 +16,7 @@ import kotlinx.android.synthetic.main.item_driver_favorites.view.tvAdapterDriver
 import kotlinx.android.synthetic.main.item_request_job.view.ivAccept
 import kotlinx.android.synthetic.main.item_request_job.view.ivCancel
 import kotlinx.android.synthetic.main.item_request_job.view.tvStatus
+import java.lang.Exception
 import java.util.*
 
 
@@ -44,10 +45,14 @@ class AdapterAdminManageGroup(
         requestOptions.error(R.mipmap.ic_launcher_round)
         requestOptions.diskCacheStrategy
 
-        Glide.with(mContext)
-            .load(Utils.convertBase64ToImage(mListProduct[position].user_image!!))
-            .apply(requestOptions)
-            .into(holder.ivProfile)
+       try {
+            Glide.with(mContext)
+                .load(Utils.convertBase64ToImage(mListProduct[position].user_image?:""))
+                .apply(requestOptions)
+                .into(holder.ivProfile)
+        }catch (ex:Exception){
+           ex.printStackTrace()
+       }
 
         when (mListProduct[position].status) {
             1 -> {
