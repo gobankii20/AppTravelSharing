@@ -133,9 +133,9 @@ class HomeUserFragment : Fragment() {
 
                     if (list[0].job_status == "1") {
                         if (list[0].job_count?.toInt() ?: 0 <= list[0].request_count ?: 0)
-                            requestJob(jobCode, list, dataSnapshot)
-                        else
                             Utils.dialogMessage(requireActivity(), "ไม่สามารถเข้าร่วมกิจกรรมนี้ได้\nเนื่องจำนวนที่เปิดรับเต็มแล้ว")
+                        else
+                            requestJob(jobCode, list, dataSnapshot)
                     } else {
                         Utils.dialogMessage(
                             requireActivity(),
