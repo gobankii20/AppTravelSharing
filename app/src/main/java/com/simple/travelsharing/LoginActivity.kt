@@ -164,6 +164,7 @@ class LoginActivity : AppCompatActivity() {
         when (modeLogin.user_rule) {
             "driver" -> {
                 if (modeLogin.status_verify == true) {
+                    saveData(modeLogin)
                     val intentMain = Intent(this, MainActivity::class.java)
                     startActivity(intentMain)
                 }else{
